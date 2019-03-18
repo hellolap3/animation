@@ -133,15 +133,26 @@ a:hover {
 
 #hero {
  position: relative;
- height: 700px;
+ height: 650px;
  overflow: hidden;
  position: relative;
 }
 
 .img {
- position: absolute;
- x: 0;
- y: 0;
+  position: absolute;
+  x: 0;
+  y: 0;
+  width: 100%;
+  min-width: 1200px;
+  transform: scale(1.2);
+  opacity: 0;
+  transition: 1s;
+}
+
+.active {
+ transform: scale(1.0);
+ opacity: 1;
+ transition: 1s;
 }
 
 .low {
@@ -158,21 +169,6 @@ a:hover {
  color: white;
  mix-blend-mode: difference;
  line-height: 0.8571428571;
-}
-
-
-
-.img {
- width: 1500px;
- transform: scale(1.2);
- opacity: 0;
- transition: 1s;
-}
-
-.active {
- transform: scale(1.0);
- opacity: 1;
- transition: 1s;
 }
 
 #block {
@@ -278,12 +274,14 @@ a:hover {
   height: 500px;
   position: absolute;
   right: 50%;
+  width: 50%;
 }
 
 .right {
  height: 500px;
  position: absolute;
  left: 50%;
+ width: 50%;
 }
 
 .intro-square {
@@ -678,7 +676,7 @@ margin-top: 27px;
  float: left;
  margin-right: 20px;
  margin-left: 20px;
- background: url(images/message1.jpg) center no-repeat;
+ background: url(message1.jpg) center no-repeat;
  background-size: cover;
  width: 400px;
  height: 200px;
@@ -690,7 +688,7 @@ margin-top: 27px;
  float: left;
  margin-right: 20px;
  margin-left: 20px;
- background: url(images/message2.jpg) center no-repeat;
+ background: url(message2.jpg) center no-repeat;
  background-size: cover;
  width: 400px;
  height: 200px;
@@ -747,7 +745,7 @@ margin-top: 27px;
 }
 
 .message-icon {
- background: url(images/message-icon.png) center no-repeat;
+ background: url(message-icon.png) center no-repeat;
  background-size: cover;
  width: 15px;
  margin-left: 15px;
@@ -1242,7 +1240,7 @@ display: inline-block;
 
 .f-bottom {
  margin-left: 100px;
- width: 1150px;
+ width: 90%;
  height: 100px;
  background-color: #2d2d2d;
  border-top: 1px solid gray;
